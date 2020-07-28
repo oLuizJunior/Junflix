@@ -9,11 +9,14 @@ function Footer() {
       </a>
       <p>
         Orgulhosamente criado durante a
-        {' '}
-        <a href="https://www.alura.com.br/">
           Imersão React da Alura
-        </a>
+        
       </p>
+        <p>
+        <a href='https://github.com/Jundrigues/Junflix'>
+          Criador por Jr Projetos
+        </a>
+        </p>
     </FooterBase>
   );
 }
