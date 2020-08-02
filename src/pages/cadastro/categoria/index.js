@@ -3,6 +3,7 @@ import { useState } from 'react';
 import {Link} from 'react-router-dom'
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
 
 function CadastroCategoria(){
   const valoresIniciais = {
@@ -54,7 +55,7 @@ function CadastroCategoria(){
             onChange={handleChange}
           />
 
-          <div>
+          {/*<div>
             <label>
                 Nome da Categoria
                 <textarea 
@@ -64,17 +65,17 @@ function CadastroCategoria(){
                   onChange={handleChange}
                 />
             </label>
-          </div>
+          </div>*/}
 
-          {/*<FormField
+          <FormField
             label="Descrição"
-            type="text"
+            type="textarea"
             name="descricao"
             value={values.descricao}
             onChange={handleChange}
-          />*/}
+          />
 
-          <div>
+          {/*<div>
             <label>
                 Descrição
                 <textarea 
@@ -84,17 +85,17 @@ function CadastroCategoria(){
                   onChange={handleChange}
                 />
             </label>
-          </div>
+          </div>*/}
 
-          {/*<FormField
+          <FormField
             label = "Cor"
             type="color"
             name="cor"
             value={values.cor}
             onChange={handleChange}
-          />*/}
+          />
 
-          <div>
+         {/* <div>
             <label>
                 cor
                 <input 
@@ -104,17 +105,17 @@ function CadastroCategoria(){
                   onChange={handleChange}
                 />
             </label>
-          </div>
+         </div>*/}
           
-          <button>
+          <Button>
             Cadastrar
-          </button>
+          </Button>
         </form>
 
         <ul>
-          {categorias.map((categoria, indice) => {
+          {categorias.map((categoria) => {
             return(
-              <li key={`${categoria}${indice}` }>
+              <li key={`${categoria.nome}` }>
                 {categoria.nome}
               </li>
             )
