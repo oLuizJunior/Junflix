@@ -4,8 +4,8 @@ module.exports = {
         "es6": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "airbnb"
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -23,5 +23,5 @@ module.exports = {
     ],
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js"] }]
-    },
+    }
 };

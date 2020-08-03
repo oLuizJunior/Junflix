@@ -1,16 +1,21 @@
 {
     "categorias": [
-        { 
+      {
         "id": 1,
-        "nome": "Front-End",
-        "decricao": "Uma Categoria Bacanuda",
-        "cor": "#cbd1ff"
-        },
-        {
-        "id": 2,
-        "nome": "Back-End",
-        "decricao": "Outra Categoria Bacanuda",
-        "cor": "#cbd1ff"  
+        "titulo": "Front End",
+        "cor": "#6BD1FF",
+        "link_extra": {
+          "text": "Formação de Front End na Alura",
+          "url": "https://www.alura.com.br/cursos-online-front-end"
         }
+      }
+     ],
+    "videos": [
+      {
+        "id": 2,
+        "categoriaId": 1,
+        "titulo": "SEO com React",
+        "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+      }
     ]
-}
+  }
