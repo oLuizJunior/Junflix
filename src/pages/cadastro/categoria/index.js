@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -10,7 +10,7 @@ function CadastroCategoria(){
     nome:'',
     descricao:'',
     cor:'',
-  }
+  };
   const [categorias, setCategorias] = useState([]);
   const [values, setValues] = useState(valoresIniciais);
 
@@ -27,9 +27,21 @@ function CadastroCategoria(){
   function handleChange(infosDoEvento) {
     setValue(
       infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value
+      infosDoEvento.target.value,
     );
     }
+
+    useEffect(() =>{
+      console.log('Alo alo Brazil');
+      const URL_TOP = 'http://localhost:8080/categorias'
+      fetch(URL_TOP)
+        .then(async (respostaDoServidor) => {
+          const resposta = await respostaDoServidor.json();
+          setCategorias([
+            ...resposta,
+          ]);
+      });
+    }, []);
 
 
     return (
@@ -111,6 +123,12 @@ function CadastroCategoria(){
             Cadastrar
           </Button>
         </form>
+
+        {categorias.length === 0 && (
+          <div>
+          Loading...
+        </div>
+        )}
 
         <ul>
           {categorias.map((categoria) => {

@@ -15,6 +15,8 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
+    "server": "json-server --watch db.json --port 8080",
+    "dev": "concurrently \"react-scripts start\" \"npm rum server\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
   }
 }
